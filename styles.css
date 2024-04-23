@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200&display=swap');
+
+:root {
+    --teene-tanny: #d65108;
+    --teene-tanny-dark: #b54507;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background: #d8d2d2;
+    font-size: 1.3rem;             
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.header {
+    margin: 10px;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.form #search-bar {
+    width: 500px;
+    padding: 12px;
+    border-radius: 50px 0 0 50px;
+    border: 1.5px solid var(--teene-tanny);
+    background: inherit;
+    font-family: "poppins", sans-serif;
+}
+
+.form #search-bar::placeholder {
+    color: var(--teene-tanny);
+    opacity: .8;
+}
+
+.form #search-btn {
+    background: var(--teene-tanny-dark);
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    border-radius: 0 50px 50px 0;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease background;
+}
+
+.contain-image {
+    padding: 30px 0;
+}
+
+h3 {
+    margin: 10px;
+    text-transform: capitalize;
+}
+
+.main-display-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .3s ease-in-out transform;
+    border-radius: 10px;
+    border: 5px solid var(--teene-tanny-dark);
+}
+
+.main-display-image:hover {
+    transform: scale(1.05);
+}
+
+.image {
+    max-width: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}
+
+.image #recipe-btn {
+    width: 100%;
+    border: none;
+    padding: 6px;
+    font-size: 1.1rem;
+    background: var(--teene-tanny-dark);
+    border-radius: 5px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: "poppins", sans-serif;
+    cursor: pointer;
+    transition: .2s ease background;
+}
+
+.image h4 {
+    padding: 10px;
+    font-weight: 500;
+}
+
+.contain-image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.display-recipe {
+    position: absolute;
+    left: 15%;
+    font-size: 1.2rem;
+    color: #fff;
+    background: var(--teene-tanny);
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    row-gap: 20px;
+    overflow-y: scroll;
+    transition: .3s;
+}
+
+.section-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.close-recipe {
+    display: none;
+}
+
+.display-recipe h4 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin: 10px 0;
+    color: #1c1b1b;
+}
+
+.recipe-category {
+    background: #fff;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px auto;
+    color: #000;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.display-recipe .recipe-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .5 ease transform;
+}
+
+.display-recipe .recipe-image:hover {
+    transform: scale(1.02);
+}
+
+.video-link {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-link a {
+    color: #eae4e4;
+    text-decoration: none;
+}
+
+.video-link a:hover {
+    border-bottom: 2px solid #eae4e4;
+}
+
+#close-display-button {
+    margin-left: 90%;
+    font-size: 2.5rem;
+    padding-left: 20px;
+    border: none;
+    background: inherit;
+    color: #000;
+    cursor: pointer;
+    transition: .3s ease color;
+}
+
+#close-display-button:hover {
+    color: #8b0000;
+}
+
+    /* hover for all buttons */
+.form #search-btn:hover,
+.image #recipe-btn:hover {
+    background: var(--teene-tanny);
+}
+
+@media (max-width: 700px) {
+    .section-header {
+        width: 100%;
+    }
+    .contain-image {
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        min-width: 100px;
+    }
+    .header h1 {
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    .quote {
+        font-size: 1.2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .form #search-bar {
+        width: 350px;
+        padding: 10px;
+    }
+
+    .container .image {
+        width: 100%;
+    }
+
+    .main-display-image:hover {
+        transform: scale(1.04);
+    }
+}
+
+@media (max-width: 418px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .quote {
+        font-size: 16px;
+    }
+
+    .form #search-bar {
+        width: 250px;
+    }
+    
+    h2{
+        width: 17px;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .contain-image {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 380px) {
+    .form #search-bar {
+        width: 200px;
+        padding: 5px;
+    }
+
+    .quote {
+        display: none;
+    }
+    h2 {
+        font-size: 18px;
+    }
+}

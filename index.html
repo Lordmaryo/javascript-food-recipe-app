@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Javascript Meal Recipe App</title>
+  </head>
+  <body>
+    <!-- beginning front page -->
+    <div class="container">
+      <div class="section-header">
+        <div class="header">
+          <h1>find meals for your ingredients</h1>
+          <div class="quote">
+            <blockquote>
+              Real food dosen't have ingredients, reals food is ingredients
+            </blockquote>
+            <cite>-Jamie oliver</cite>
+          </div>
+        </div>
+        <div class="form">
+          <input
+            type="search"
+            placeholder="Enter an ingredient"
+            id="search-bar"
+          />
+          <button type="submit" id="search-btn">
+            <i class="ri-search-line"></i>
+          </button>
+        </div>
+        <!-- <h3 class="search-result">your search results:</h3> -->
+        <div class="testing">
+          <div class="contain-image" id="contain-image"></div>
+        </div>
+      </div>
+
+      <!-- starting of display recipe page  -->
+      <div class="meal-cat">
+        <div class="display-recipe close-recipe">
+          <button type="button" id="close-display-button">&times;</button>
+        </div>
+      </div>
+    </div>
+    <!-- end of display recipe page-->
+    <script src="app.js"></script>
+  </body>
+</html>
